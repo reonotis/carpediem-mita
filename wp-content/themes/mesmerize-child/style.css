@@ -1,0 +1,1101 @@
+/*
+Theme Name:mesmerize-child
+Template:mesmerize
+Version: 1.6.107
+
+*/
+/* active-line-bottom  dropdown-menu */
+
+/* defaultの上書き */
+ul.dropdown-menu.active-line-bottom > .current_page_item > a,
+ul.dropdown-menu.active-line-bottom > .current-menu-item > a{
+    border-bottom: 3px solid #000000;
+}
+.coloured-nav ul.dropdown-menu.active-line-bottom > .current_page_item > a,
+.coloured-nav ul.dropdown-menu.active-line-bottom > .current-menu-item > a,
+.fixto-fixed ul.dropdown-menu.active-line-bottom > .current_page_item > a,
+.fixto-fixed ul.dropdown-menu.active-line-bottom > .current-menu-item > a
+{
+    border-bottom: 3px solid #000000;
+}
+
+.coloured-nav ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.coloured-nav ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.coloured-nav ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.coloured-nav ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.fixto-fixed ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.fixto-fixed ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.fixto-fixed ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item).hover > a
+{
+    color: #000000;
+}
+
+.coloured-nav ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.coloured-nav ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.coloured-nav ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.coloured-nav ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.fixto-fixed ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.fixto-fixed ul.dropdown-menu.active-line-bottom > li:not(.current-menu-item):not(.current_page_item).hover > a,
+.fixto-fixed ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item):hover > a,
+.fixto-fixed ul.dropdown-menu.default > li:not(.current-menu-item):not(.current_page_item).hover > a {
+    color: #111;
+	background: #888;
+}
+
+@media (min-width: 768px){}
+ul.dropdown-menu > li:hover > a,
+ul.dropdown-menu > li.hover > a {
+    color: #111;
+	background: #888;
+}
+.header{
+	display: none;
+}
+
+
+
+/* お知らせ */
+ul.newNotice {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	counter-reset:li;
+}
+ul.newNotice li {
+	line-height: 1.5;
+	margin-bottom: 5px;
+	padding: 13px 13px 13px 40px;
+	list-style-type: none!important;
+	color: #111;
+	border-bottom: solid 1px #111;
+	transition: 1s;
+	transition-duration: 0.3s;
+}
+ul.newNotice li:hover{
+	color: #fff;
+	background: #111;
+	padding-left: 60px;
+}
+span.newNoticeLatest{
+	color: #fff;
+	background: #e01b1b;
+	border-radius: 5px;
+	padding: 3px 5px;
+	margin-right: 8px;
+}
+@media screen and (max-width:650px){
+	ul.newNotice li {
+		padding: 13px 0 13px ;
+		text-align: left;
+		font-size: 0.9em;
+	}
+	span.newNoticeLatest{
+		border-radius: 5px;
+		padding: 2px 3px;
+		margin-right: 5px;
+		font-size: 0.7em;
+	}
+}
+
+
+
+/* 週間スケジュール */
+.schedule_section{
+    width: 100%;
+    color: #111;
+}
+@media screen and (max-width:650px){
+	.schedule_section{
+		overflow:scroll;
+	}
+}
+.schedule_area{
+    width: 100%;
+    max-width: 1000px;
+	min-width: 500px;
+    margin: 0 auto;
+}
+.schedule_headerArea,
+.schedule_bodyArea{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px;
+    display: table;
+    table-layout: auto;
+}
+.schedule_bodyArea{
+    border: solid 1px #777;
+}
+
+.MIDASHI{
+    position: relative;
+    width: 70px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+@media screen and (max-width:650px){
+	.MIDASHI{
+		width: 50px ;
+	}
+}
+.weekArea{
+    background: #000;
+	color: #fff;
+    position: relative;
+    width: 100%;
+    width: calc((100% - 100px ) / 7 );
+    display: table-cell;
+    vertical-align: middle;
+	border-left: solid 1px #888;
+}
+.weekArea::after{
+    position: absolute;
+    content: "";
+    background: #000;
+    height: 20px;
+    width: 20px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	transform: rotate(-45deg);
+}
+.weekArea.saturday{
+	background : #04438b;
+}
+.weekArea.saturday::after{
+	background : #04438b;
+}
+.weekArea.sunday{
+	background : #8b0404;
+	color: #fff;
+}
+.weekArea.sunday::after{
+	background : #8b0404;
+}
+
+.schedule_bodyArea{
+    width: 100%;
+    font-size      : 11px ;
+    letter-spacing : 1px ;
+    margin-bottom  : 20px ;
+    display: flex;
+    box-sizing     : content-box ;
+}
+
+.times{
+	float          : left ;
+	display: block;
+	width          : 70px ;
+	box-sizing     : content-box ;
+}
+@media screen and (max-width:650px){
+	.times{
+		width: 50px ;
+	}
+}
+
+.weeks{
+	border-left    : solid 1px #aaa ;
+	width          : calc((100% - 70px) / 7 );
+	float          : left ;
+	box-sizing     : content-box ;
+}
+@media screen and (max-width:650px){
+	.weeks{
+		width          : calc((100% - 30px) / 7 );
+	}
+}
+
+.JIKAN{
+    position: relative;
+	height         : 14px ;
+}
+.times>.JIKAN{
+	height         : 14px ;
+	position       : relative ;
+	top            : -6.5px ;
+	margin         : 0 0 0 2px;
+}
+@media screen and (max-width:650px){
+	.JIKAN{
+		height         : 11px ;
+	}
+	.times>.JIKAN{
+		height         : 11px ;
+	}
+}
+.weeks>.JIKAN{
+	background : #fff ;
+	border-bottom  : solid 1px #eee ;
+}
+
+.weeks>.JIKAN:last-child{
+	border-bottom  : none ;
+
+}
+
+.weeks>.JIKAN.grayBox{
+	background : #eee ;
+	border-bottom  : solid 1px #ddd ;
+}
+.weeks>.JIKAN.J45{
+	border-bottom  : solid 1px #aaa ;
+}
+.JIKAN.J45:last-child{
+	border-bottom  : none !important;
+}
+
+.JIKANTIME{
+	margin         : 0 ;
+	padding        : 0 ;
+	line-height    : 12px ;
+	font-size      : 10px ;
+	display        : flex ;
+	align-items    : center ;
+	box-sizing     : content-box ;
+}
+@media screen and (max-width:650px){
+	.JIKANTIME{
+		line-height    : 12px ;
+		font-size      : 7px ;
+	}
+}
+.JIKANTIME:before{
+	content        : "";
+	height         : 1px ;
+	width          : 5px ;
+	flex-grow      : 1 ;
+	box-sizing     : content-box ;
+}
+.JIKANTIME:after{
+	content: "";
+	height: 1px ;
+	width: 5px ;
+	background: #aaa;
+	flex-grow: 1;
+	box-sizing: content-box ;
+}
+
+
+@media screen and (max-width:650px){
+	.implementationDate{
+		display:none;
+	}
+}
+
+.KOUSU{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: inherit;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 10px;
+    height: 14px;
+    z-index: 100;
+    letter-spacing: -.1px;
+    color: #111;
+}
+.lessonTitle{
+    margin: 0 0 2px;
+	line-height: 15px;
+}
+.time1{
+	height: 12px ;
+}
+.time2{
+	height: calc(14px * 2) ;
+}
+.time2 > .lessonTitle{
+    line-height: 10px;
+}
+.time3{
+	height: calc(14px * 3);
+}
+.time4{
+	height: calc(14px * 4);
+}
+.time5{
+	height: calc(14px * 5);
+}
+.time6{
+	height: calc(14px * 6);
+}
+.time7{
+	height: calc(14px * 7);
+}
+.time8{
+	height: calc(14px * 8);
+}
+.time9{
+	height: calc(14px * 9);
+}
+
+@media screen and (max-width:650px){
+	.lessonTitle{
+		line-height: 10px;
+	}
+
+	.time1{
+		height: 11px ;
+	}
+	.time2{
+		height: calc(11px * 2) ;
+	}
+	.time3{
+		height: calc(11px * 3);
+	}
+	.time4{
+		height: calc(11px * 4);
+	}
+	.time5{
+		height: calc(11px * 5);
+	}
+	.time6{
+		height: calc(11px * 6);
+	}
+	.time7{
+		height: calc(11px * 7);
+	}
+	.time8{
+		height: calc(11px * 8);
+	}
+	.time9{
+		height: calc(11px * 9);
+	}
+}
+
+
+
+
+
+
+
+/* プライベートレッスン費用一覧 */
+.privateLessonFee{
+	width : 500px;
+    border-collapse: separate;
+	border-spacing: 0px 10px;
+}
+.privateLessonFee th,
+.privateLessonFee td{
+    padding: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+	border-bottom: solid 1px #111;
+}
+.privateLessonFee th{
+	background: #111;
+	color: #fff;
+}
+.privateLessonFee td{
+	color: #111;
+}
+
+
+
+
+
+
+/* course一覧 */
+.courseScheduleListArea{
+	position: relative;
+	color:#111;
+	padding: 0 0 0 200px;
+	width: 600px;
+	margin: 0 auto;
+}
+@media screen and (max-width:650px){
+	.courseScheduleListArea{
+		padding: 0;
+		width: 330px;
+		margin: 0 auto;
+	}
+}
+.courseScheduleWrapper{
+	width: 100%;
+}
+.courseScheduleWrapperTitle{
+	display: inline-block;
+	width: 100%;
+	height: 46px;
+	background: #111;
+	color: #fff;
+	border-radius: 23px;
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:650px){
+	.courseScheduleWrapperTitle{
+		width: 300px;
+		margin: 0 auto;
+	}
+}
+.courseScheduleContent{
+	padding: 10px;
+}
+.scheduleWeekRow{
+	padding: 5px 0 5px 5px ;
+	border-bottom: solid 1px #111;
+    display: flex;
+    justify-content: left;
+}
+.scheduleWeekName{
+	width: 70px;
+    display: flex;
+    align-items: center;
+}
+.scheduleWeekContent{
+	width: calc(100% - 70px);
+	text-align: left;
+}
+.scheduleWeekContentTime{
+	display: inline-block;
+	width: 73px;
+	padding: 0 8px 0 0;
+}
+
+
+
+
+/* インストラクターエリア */
+.instructorsSection{
+	width: 100%;
+}
+.instructorsArea{
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.instructorBox{
+	position: relative;
+	width: 400px;
+	margin : 0 auto 30px;
+	padding: 0 0 30px;
+	float: left;
+}
+@media screen and (max-width:650px){
+}
+.instr_img{
+	width: 350px;
+	height: 400px;
+	margin: 30px auto 0;
+    box-shadow: 2px 2px 40px 2px #ddd;
+}
+.instr_img img{
+	width: 350px;
+	height: 400px !important;
+	object-fit: cover;
+}
+@media screen and (max-width:650px){
+	.instr_img{
+		width: 300px;
+		height: 350px;
+	}
+	.instr_img img{
+		width: 300px;
+		height: 350px !important;
+	}
+}
+
+
+.instr_level{
+	position: relative;
+	height: 40px;
+	background: #111;
+	color: #fff;
+	border-radius: 0 0 20% 20% / 0 0 15% 15%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.instr_level::before,
+.instr_level::after{
+	content:"";
+	position: absolute;
+	width: 28px;
+	height: 80px;
+	background: #111;
+	border-radius: 3px;
+	top: 5px;
+	left: 0;
+}
+.instr_level::before{
+    transform: rotate(20deg);
+	left: 20px;
+}
+.instr_level::after{
+	transform: rotate(-20deg);
+	left: 40px;
+}
+
+.instr_level.brown{
+	background: #85382a;
+}
+.instr_level.brown::before,
+.instr_level.brown::after{
+	background: #85382a;
+}
+
+.instr_level.purple{
+	background: purple;
+}
+.instr_level.purple::before,
+.instr_level.purple::after{
+	background: purple;
+}
+.instr_level.blue{
+	background: #232394;
+}
+.instr_level.blue::before,
+.instr_level.blue::after{
+	background: #232394;
+}
+
+
+.instr_level_support{
+	position: relative;
+}
+.instr_level_support::before,
+.instr_level_support::after{
+    content: '';
+    position: absolute;
+    top: -52px;
+    border: none;
+}
+.instr_level_support::before{
+    left: 0;
+    border-top: solid 12px transparent;
+    border-right: solid 25px #959e9b;
+}
+.instr_level_support::after{
+    right: 0;
+    border-top: solid 12px transparent;
+    border-left: solid 25px #959e9b;
+}
+.instr_level_support_knot{
+    content: '';
+    position: absolute;
+	width: 47px;
+	height: 38px;
+    top: -40px;
+	left: 22px;
+    border: solid 1px #ffffff25;
+	border-radius: 3px;
+}
+.instr_content{
+	width: 350px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+    box-shadow: 2px 2px 40px 2px #ddd;
+}
+@media screen and (max-width:650px){
+	.instr_content{
+		width: 300px;
+	}
+}
+.instr_name{
+	width: 100%;
+	height: 50px;
+    padding: 0 0 0 50px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+	color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:650px){
+}
+.inst_title{
+    padding: 10px 5px 10px 0;
+    font-size: 12px;
+}
+.inst_title>ul{
+	margin-left: 25px;
+	margin-bottom: 5px;
+}
+.inst_title>ul>li{
+	line-height: 15px;
+	padding-bottom: 5px;
+	color: #555;
+}
+@media screen and (max-width:650px){
+	.inst_title{
+		text-align: left;
+	}
+}
+
+
+.instructorButton > a{
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+    font-family: "Roboto", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    border: solid 3px #111;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+	color: #111;
+	transition: 0.3s;
+}
+.instructorButton > a:hover{
+    border: solid 3px #111;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+	color: #fff;
+	background: #111;
+}
+
+
+
+
+
+/* インストラクター個別ページ */
+
+.instructorSection{
+	width: 100%;
+}
+.instructorArea{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+	color: #222;
+}
+@media screen and (max-width:650px){
+	.instructorArea::before,
+	.instructorArea::after{
+		content: none;
+	}
+}
+.instructorImg{
+	width: 300px;
+	height: 400px;
+}
+.instructorImg>img{
+	width: 300px;
+	height: 400px !important;
+	object-fit: cover;
+}
+
+.instructorContents{
+	width: calc(100% - 300px);
+	padding: 20px;
+}
+@media screen and (max-width:650px){
+	.instructorContents{
+		width: 100%;
+		padding: 20px 5px;
+	}
+}
+.instructorName{
+	padding: 10px 0 10px 10px;
+	font-size: 1.6em;
+	font-weight: 600;
+}
+@media screen and (max-width:650px){
+	.instructorName{
+		padding: 10px 10px 5px;
+	}
+}
+.instructorLevel{
+	padding: 10px 10px 0;
+	margin: 0;
+	font-size: 1.3em;
+	font-weight: 600;
+	border-top: solid 1px #666;
+	display: inline-block;
+}
+@media screen and (max-width:650px){
+	.instructorLevel{
+		width: 100%;
+		padding: 5px 10px 0;
+	}
+}
+.specialMove{
+	margin: 20px 0 0;
+}
+.specialMoveTitle{
+	width: 100%;
+	margin: 0 3px 3px;
+	padding: 0 8px 3px;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom: solid 1px #ddd;
+}
+.specialMoveContent{
+	padding: 0 8px 3px;
+}
+@media screen and (max-width:650px){
+	.specialMoveContent{
+		text-align: left;
+	}
+}
+
+.snsList{
+	margin: 20px 0;
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.snsList::before{
+	content: none;
+}
+@media screen and (max-width:650px){
+	.snsList::before{
+		content: "";
+	}
+}
+.snsList> a > div{
+	width: 40px;
+}
+.instructorTitleArea{
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 20px;
+}
+
+.instructorTitleWrapper{
+	padding: 20px 0 10px;
+	margin: 0 0 10px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom: solid 1px #333;
+}
+ul.instructorTitleList{
+	margin-bottom: 0;
+}
+ul.instructorTitleList>li{
+	margin: 0 auto 10px;
+	max-width: 600px;
+}
+@media screen and (max-width:650px){
+	ul.instructorTitleList>li{
+		text-align: left;
+	}
+}
+.instructorTitleArea:nth-child(4){
+	margin: 0 auto 80px;
+}
+.instructorPrivateLessonArea{
+	width: 100%;
+	padding: 50px;
+	margin: 50px auto;
+	width: 100%;
+	border: solid 1px #dddd;
+}
+@media screen and (max-width:650px){
+	.instructorPrivateLessonArea{
+		padding: 30px 10px;
+	}
+}
+.instructorPrivateLessonWrapper{
+	padding: 20px 0 ;
+	margin: 0 0 30PX;
+	text-align: center;
+	font-size: 1.6em;
+	border-top: double 7px #111;
+	border-bottom: double 7px #111;
+}
+@media screen and (max-width:650px){
+	.instructorPrivateLessonWrapper{
+		padding: 20px 0 ;
+		margin: 0 15px 30PX;
+		text-align: center;
+	}
+}
+.instructorLessonFeeContent{
+	display: flex;
+    flex-flow: wrap;
+}
+.LessonFeeContent{
+	padding-right: 30px;
+}
+.privateLessonContent{
+	margin: 60px 0;
+}
+@media screen and (max-width:650px){
+	.privateLessonContent{
+		text-align: left;
+	}
+}
+.privateLessonTitle{
+	position: relative;
+	width: 100%;
+	margin: 0 0 5px;
+	font-size: 22px;
+	font-weight: 700;
+	border-bottom: solid 1px #ddd;
+}
+@media screen and (max-width:650px){
+	.privateLessonTitle{
+		text-align: center;
+	}
+}
+
+.privateLessonTitle::before {
+	content: attr(data-en);
+	position: absolute;
+	transform: rotate(-5deg);
+	top: -25px;
+	left: -30px;
+	color: rgba(160, 153, 155, 0.281);
+	font-size: 35px;
+	font-weight: 400;
+	font-family: serif, luxus-brut, cursive;
+	font-style: italic;
+}
+@media screen and (max-width:650px){
+	.privateLessonTitle::before {
+		left: -10px;
+	}
+}
+
+
+
+.instructorGalleryErea{
+	width: 100%;
+	margin: 50px auto;
+	width: 100%;
+}
+.instructorGalleryWrapper{
+	padding: 20px 0 ;
+	margin: 0 0 30PX;
+	text-align: center;
+	font-size: 1.6em;
+	border-top: double 7px #111;
+	border-bottom: double 7px #111;
+}
+.instructorGalleryContent{
+	width: 100%;
+	display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.instructorGalleryContent >
+.instructorGalleryImg{
+	width: 300px;
+	height: 220px;
+	margin: 0 auto 30px;
+}
+.instructorGalleryContent >
+.instructorGalleryImg > img{
+	width: 300px;
+	height: 220px;
+	object-fit: cover;
+}
+.instructorGalleryContent::before,
+.instructorGalleryContent::after{
+	content: none;
+}
+@media screen and (max-width:650px){
+	.instructorGalleryContent >
+	.instructorGalleryImg{
+		width: 45%;
+		height: 100px;
+		margin: 0 auto 10px;
+	}
+	.instructorGalleryContent >
+	.instructorGalleryImg > img{
+		width: 100%;
+		height: 100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* Q & A */
+.qa_title {
+	margin-bottom: 0 !important;
+    font-size: 1.1em;
+    font-weight: 600;
+	padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+	position: relative;
+	border: solid 2px #111;
+}
+.qa_content{
+	padding: 20px;
+	font-size: 1.1em;
+    font-weight: 600;
+	border: solid 2px #111;
+	border-top: none;
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s;
+	position: relative;
+}
+.qa_title:before,
+.qa_content:before{
+    position: relative;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin: 0 10px;
+	border: solid 2px #111;
+    float: left;
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.qa_title:before {
+    content: "Q";
+    background: #111;
+    color: #fff;
+}
+.qa_content:before {
+    content: "A";
+    background: #fff;
+    color: #111;
+}
+
+
+
+.content_wrapper > div > span{
+	background: #fff;
+	padding: 0 15px;
+    position: relative;
+	z-index: 100;
+}
+.content_wrapper > div:after {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 1px;
+    background: #333;
+    display: block;
+    top: 10px;
+    z-index: 1;
+}
+
+
+.member_info_table1{
+    table-layout: fixed;
+	border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+.member_info_table1 th{
+    background: #111;
+	color: #fff;
+    border: 1px solid #cfcfcf;
+}
+.member_info_table1 td{
+    border: 1px solid #cfcfcf;
+	color: #111;
+    vertical-align: middle;
+}
+.member_info_table1 th:first-child,
+.member_info_table1 td:first-child {
+    padding-left: 16px;
+}
+.member_info_table1 th:last-child,
+.member_info_table1 td:last-child {
+    padding-right: 16px;
+}
+@media screen and (max-width:650px){
+	.member_info_table1 th{
+		display: none;
+	}
+	.member_info_table1 td{
+		position: relative;
+		display: block;
+		padding: 0 5px 5px;
+		margin: 0 0 5px;
+		text-align: left;
+		overflow-wrap: normal;
+	}
+	.member_info_table1 td:first-child {
+		padding-left: 5px;
+	}
+	.member_info_table1 td:last-child {
+		padding-right: 5px;
+	}
+	.member_info_table1 td:before{
+		position: relative;
+		content: attr(data-label);
+		margin-bottom: 5px;
+		padding: 5px 10px;
+		display: block;
+		color: #fff;
+		background-color: #111;
+		font-weight: bold;
+		width: calc(100% + 10px);
+		left: -5px;
+	}
+}
+
+
+
+.member_info_table2{
+	border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+.member_info_table2 th{
+    background: #111;
+	color: #fff;
+    border: 1px solid #cfcfcf;
+	vertical-align: middle;
+	text-align: center;
+    width: 200px;
+}
+.member_info_table2 td{
+    border: 1px solid #cfcfcf;
+	color: #111;
+    vertical-align: middle;
+}
+.member_info_table2 th:first-child,
+.member_info_table2 td:first-child {
+    padding-left: 16px;
+}
+.member_info_table2 th:last-child,
+.member_info_table2 td:last-child {
+    padding-right: 16px;
+}
+
+@media screen and (max-width:650px){
+	.member_info_table2 th{
+		width: 100px;
+	}
+}
