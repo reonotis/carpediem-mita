@@ -328,7 +328,7 @@ function show_instructorsList($atts) {
                                     }
                                 $HTML .= '</ul>';
                             $HTML .= '</div>';
-                            $HTML .= '<div class="instructorButton" ><a href="./instructor?id=' . $instructor->id . '" >詳細を見る</a></div>';
+                            $HTML .= '<div class="instructorButton" ><a href="../instructor?id=' . $instructor->id . '" >詳細を見る</a></div>';
                         $HTML .= '</div>';
                     $HTML .= '</div>';
                 }
