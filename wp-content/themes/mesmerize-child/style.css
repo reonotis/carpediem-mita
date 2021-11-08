@@ -397,9 +397,12 @@ span.newNoticeLatest{
 .privateLessonFee td{
 	color: #111;
 }
-
-
-
+@media screen and (max-width:650px){
+	.privateLessonFee{
+		width: 98%;
+		margin: 0 auto;
+	}
+}
 
 
 
