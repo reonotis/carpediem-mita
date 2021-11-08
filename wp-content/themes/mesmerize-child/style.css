@@ -469,6 +469,32 @@ span.newNoticeLatest{
 
 
 
+/* 初めての方へ　レッスンについて */
+.image_content{
+        position: relative;
+}
+.image_content::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 200px;
+        width: calc(100% - 200px);
+        height: 100%;
+        background: #f8f8f8;
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+@media screen and (max-width:650px){
+        .image_content::before{
+                left: 3%;
+                width: 94%;
+        }
+}
+
+
+
+
+
+
 /* インストラクターエリア */
 .instructorsSection{
 	width: 100%;
