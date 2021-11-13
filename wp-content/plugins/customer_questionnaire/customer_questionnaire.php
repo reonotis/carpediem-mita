@@ -97,6 +97,11 @@ class Customer_questionnaire
             require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
             dbDelta($sql);
 
+
+            $ALTER_sql = "ALTER TABLE ". $this->_table_name ."
+            ADD PRIMARY KEY (`id`);";
+            dbDelta($ALTER_sql);
+
             // option を初期設定済みに更新
             update_option('customer_questionnaire_plugin_installed', self::INITIALLY_SET);
         }
