@@ -58,7 +58,7 @@ if($_GET['ID']){
         include_once 'list.php';
         exit;
     }
-    include_once 'edit.php';
+    include_once 'edit_customer_questionnaire.php';
 }else{
     include_once 'list.php';
 }
