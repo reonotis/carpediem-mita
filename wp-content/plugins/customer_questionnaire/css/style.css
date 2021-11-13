@@ -1,0 +1,107 @@
+.cq_content{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    color: #333;
+    border: solid 1px #777;
+    opacity: 1;
+    z-index: 50;
+    box-shadow: 0px 0px 10px 0px #4643438f;
+
+}
+.cq_initialNameArea{
+    width: 100%;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: solid 1px #aaa;
+}
+.cq_sex{
+    font-size: 18px;
+}
+.sex_man{
+    color: #3056bd;
+    font-size: 15px;
+}
+.sex_woman{
+    color: #a12020;
+    font-size: 15px;
+}
+.cq_textArea{
+    width: calc(100% - 200px);
+    text-align: left;
+}
+.cq_textContent{
+    width: 100%;
+    margin: 10px 0 20px;
+    padding: 0 10px 0 0;
+}
+.cq_textWrapper{
+    width:100%;
+    padding: 0 10px;
+    border-bottom: solid 1px #be6b6b;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.cq_textBody{
+    width:100%;
+    padding: 0 10px;
+    font-size: 0.9em;
+}
+.cq_imgArea{
+    width: 200px;
+    height: 250px;
+    background: #ccc;
+    margin: 10px 0 0;
+}
+.cq_imgArea > img{
+    width: 200px;
+    height: 250px;
+    border: solid 1px #bbb;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 100000;
+}
+
+
+@media screen and (max-width:650px){
+    .cq_textArea{
+        width: calc(100% - 80px);
+    }
+    .cq_imgArea{
+        width: 80px;
+        height: 120px;
+    }
+    .cq_imgArea > img{
+        width: 80px;
+        height: 120px;
+    }
+
+}
+
+
+
+.cq_popup{
+    position: fixed;
+    top: 0;
+    left:0;
+    background: #3338;
+    width: 100vw;
+    height: 100vh;
+}
+.cq_popup>img{
+    display:block;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 15vh auto 5vh;
+    object-fit: cover;
+}
+
+
