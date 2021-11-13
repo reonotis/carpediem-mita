@@ -82,7 +82,7 @@ class Customer_questionnaire
 
             // テーブルの作成
             $sql = "CREATE TABLE ". $this->_table_name ." (
-                        `id`           int(10)      NOT NULL           COMMENT 'ID',
+                        `id`           int(10)      NOT NULL AUTO_INCREMENT COMMENT 'ID',
                         `initial_name` varchar(100) NOT NULL           COMMENT 'イニシャルネーム',
                         `age`          int(10)      NOT NULL           COMMENT '年齢',
                         `sex`          int(10)      NOT NULL           COMMENT '性別',
@@ -92,15 +92,20 @@ class Customer_questionnaire
                         `future_goals` varchar(200) NOT NULL           COMMENT '目標',
                         `img_pass`     varchar(200) DEFAULT NULL       COMMENT '画像パス',
                         `display_flg`  int(1)       NOT NULL DEFAULT 0 COMMENT '表示フラグ',
-                        `del_flg`      int(1)       NOT NULL DEFAULT 0 COMMENT '削除フラグ'
-                    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+                        `del_flg`      int(1)       NOT NULL DEFAULT 0 COMMENT '削除フラグ',
+                        UNIQUE KEY id (id)
+                    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+                    ALTER TABLE ". $this->_table_name ."
+                    ADD PRIMARY KEY (`id`);
+            ";
             require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
             dbDelta($sql);
 
 
-            $ALTER_sql = "ALTER TABLE ". $this->_table_name ."
-            ADD PRIMARY KEY (`id`);";
-            dbDelta($ALTER_sql);
+            // $ALTER_sql = "ALTER TABLE ". $this->_table_name ."
+            // ADD PRIMARY KEY (`id`);";
+            // dbDelta($ALTER_sql);
 
             // option を初期設定済みに更新
             update_option('customer_questionnaire_plugin_installed', self::INITIALLY_SET);
