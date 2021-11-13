@@ -1,5 +1,6 @@
-.cq_content{
+.cq_contents{
     width: 100%;
+    height: 100%;
     max-width: 500px;
     margin: 0 auto;
     padding: 10px;
@@ -11,16 +12,36 @@
     opacity: 1;
     z-index: 50;
     box-shadow: 0px 0px 10px 0px #4643438f;
-
+    vertical-align: top;
 }
+.cq_contents::before,
+.cq_contents::after
+{
+    content: none;
+}
+
 .cq_initialNameArea{
     width: 100%;
+    height: 35px;
     margin: 0 0 5px;
     padding: 5px 10px;
     text-align: center;
     font-size: 20px;
     border-bottom: solid 1px #aaa;
 }
+.cq_content{
+    width: 100%;
+    height: calc(100% - 35px);
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.cq_content::before,
+.cq_content::after
+{
+    content: none;
+}
+
 .cq_sex{
     font-size: 18px;
 }
@@ -81,7 +102,6 @@
         width: 80px;
         height: 120px;
     }
-
 }
 
 

@@ -251,27 +251,29 @@ class Customer_questionnaire
                 return "データを取得できません";
             }
 
-            $out = '<div class="cq_content" >';
+            $out = '<div class="cq_contents" >';
                 $out .= '<div class="cq_initialNameArea" >'. $this->set_name_age_sex($results->initial_name, $results->age, $results->sex) .'</div>';
-                $out .= '<div class="cq_textArea" >';
-                    $out .= '<div class="cq_textContent" >';
-                        $out .= '<div class="cq_textWrapper" >きっかけ</div>';
-                        $out .= '<div class="cq_textBody" >'.$results->join_trigger.'</div>';
+                $out .= '<div class="cq_content" >';
+                    $out .= '<div class="cq_textArea" >';
+                        $out .= '<div class="cq_textContent" >';
+                            $out .= '<div class="cq_textWrapper" >きっかけ</div>';
+                            $out .= '<div class="cq_textBody" >'.$results->join_trigger.'</div>';
+                        $out .= '</div>';
+                        $out .= '<div class="cq_textContent" >';
+                            $out .= '<div class="cq_textWrapper" >印象</div>';
+                            $out .= '<div class="cq_textBody" >'.$results->impression.'</div>';
+                        $out .= '</div>';
+                        $out .= '<div class="cq_textContent" >';
+                            $out .= '<div class="cq_textWrapper" >感想</div>';
+                            $out .= '<div class="cq_textBody" >'.$results->thoughts.'</div>';
+                        $out .= '</div>';
+                        $out .= '<div class="cq_textContent" >';
+                            $out .= '<div class="cq_textWrapper" >目標</div>';
+                            $out .= '<div class="cq_textBody" >'.$results->future_goals.'</div>';
+                        $out .= '</div>';
                     $out .= '</div>';
-                    $out .= '<div class="cq_textContent" >';
-                        $out .= '<div class="cq_textWrapper" >印象</div>';
-                        $out .= '<div class="cq_textBody" >'.$results->impression.'</div>';
-                    $out .= '</div>';
-                    $out .= '<div class="cq_textContent" >';
-                        $out .= '<div class="cq_textWrapper" >感想</div>';
-                        $out .= '<div class="cq_textBody" >'.$results->thoughts.'</div>';
-                    $out .= '</div>';
-                    $out .= '<div class="cq_textContent" >';
-                        $out .= '<div class="cq_textWrapper" >目標</div>';
-                        $out .= '<div class="cq_textBody" >'.$results->future_goals.'</div>';
-                    $out .= '</div>';
+                    $out .= '<div class="cq_imgArea" id="cq_imgArea_' . $results->id . '" ><img src="'. $results->img_pass .'"></div>';
                 $out .= '</div>';
-                $out .= '<div class="cq_imgArea" id="cq_imgArea_' . $results->id . '" ><img src="'. $results->img_pass .'"></div>';
             $out .= '</div>';
 
 
