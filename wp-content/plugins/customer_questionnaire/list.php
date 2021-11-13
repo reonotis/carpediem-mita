@@ -1,10 +1,5 @@
 <?php
-
-
-
-$customer_quests = $FCQ->get_customer_questionnaire_list();
-
-
+    $customer_quests = $FCQ->get_customer_questionnaire_list();
 ?>
 
 <div class="wrap">
@@ -13,10 +8,12 @@ $customer_quests = $FCQ->get_customer_questionnaire_list();
 
     <?php settings_errors(); ?>
     <!-- <table class="widefat fixed striped"> -->
+    <p >お客様の声を登録したら、発行されたショートコードをページに貼り付けてください。</p>
+
     <table class="widefat">
         <thead>
             <tr>
-                <th>short code</th>
+                <th>ショートコード</th>
                 <th>イニシャル</th>
                 <th>画像</th>
                 <th>HP表示</th>
