@@ -7,6 +7,7 @@ jQuery(function(){
     }
 
     // ショートコードをで入れた場合の親要素にスタイルを充てる
+    jQuery('.cq_contents').parent().parent().parent().css('height', '100%')
     jQuery('.cq_contents').parent().parent().css('height', '100%')
     jQuery('.cq_contents').parent().css('height', '100%')
 
